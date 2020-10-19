@@ -1,68 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Calculator 
 
-## Available Scripts
+[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
+![GitHub followers](https://img.shields.io/github/followers/ebeagusamuel?label=ebeagusamuel&style=social)
+![Twitter URL](https://img.shields.io/twitter/follow/ebeagu_samuel?label=Follow&style=social)
 
-In the project directory, you can run:
+> This is a Microverse React project
 
-### `yarn start`
+>  Calculator milestone one!
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Calculator is a react project. This is the first milestone which involves basic set up and deployment 
 
-### `yarn test`
+## Features
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In this project, the following features were done;
+- Created react app with create-react-app
 
-### `yarn build`
+## Built with
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- HTML
+- Git
+- CSS
+- Webpack
+- npm
+- command-line tools such as git.
+- React
+- create-react-app-buildpack
+- big.js
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Author
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+👤 **Ebeagu Samuel**
 
-### `yarn eject`
+- LinkedIn: [Ebeagu Samuel](https://www.linkedin.com/in/ebeagusamuel)
+- Github: [@ebeagusamuel](https://github.com/ebeagusamuel)
+- Twitter: [@ebeagu_samuel](https://twitter.com/ebeagu_samuel)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contributing 🤝
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions, issues, and feature requests are welcome!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Acknowledgments
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Thanks to Microverse for its support!
 
-## Learn More
+## Show your support
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Give a ⭐️ if you like this project!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](http://opensource.org/licenses/mit-license.php)
