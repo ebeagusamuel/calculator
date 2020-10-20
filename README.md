@@ -50,5 +50,4 @@ Contributions, issues, and feature requests are welcome!
 Give a ⭐️ if you like this project!
 
 ## License
-
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](http://opensource.org/licenses/mit-license.php)
