@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .containerDiv {
   margin: auto;
   width: 700px;
@@ -15,5 +21,13 @@
   font-weight: bold;
   text-align: right;
   padding-right: 15px;
-  padding-top: 50px;
+  padding-top: 40px;
+}
+
+.buttonPanel{
+  width: 100%;
+}
+
+.buttonGroup{
+  height: 100px;
 }
