@@ -1,38 +1,36 @@
 import React from 'react';
 import Button from './Button';
 
-const renderButton = name => <Button name={name} />;
-
 const ButtonPanel = () => (
-  <div>
-    <div id="group1">
-      {renderButton('AC')}
-      {renderButton('+/-')}
-      {renderButton('%')}
-      {renderButton('÷')}
+  <div className="buttonPanel">
+    <div className="buttonGroup" id="group1">
+      <Button name="AC" color="ash" />
+      <Button name="+/-" color="ash" />
+      <Button name="%" color="ash" />
+      <Button name="÷" />
     </div>
-    <div id="group2">
-      {renderButton('7')}
-      {renderButton('8')}
-      {renderButton('9')}
-      {renderButton('X')}
+    <div className="buttonGroup" id="group2">
+      <Button name="7" color="ash" />
+      <Button name="8" color="ash" />
+      <Button name="9" color="ash" />
+      <Button name="X" />
     </div>
-    <div id="group3">
-      {renderButton('4')}
-      {renderButton('5')}
-      {renderButton('6')}
-      {renderButton('-')}
+    <div className="buttonGroup" id="group3">
+      <Button name="4" color="ash" />
+      <Button name="5" color="ash" />
+      <Button name="6" color="ash" />
+      <Button name="-" />
     </div>
-    <div id="group4">
-      {renderButton('1')}
-      {renderButton('2')}
-      {renderButton('3')}
-      {renderButton('+')}
+    <div className="buttonGroup" id="group4">
+      <Button name="1" color="ash" />
+      <Button name="2" color="ash" />
+      <Button name="3" color="ash" />
+      <Button name="+" />
     </div>
-    <div id="group5">
-      {renderButton('0')}
-      {renderButton('.')}
-      {renderButton('=')}
+    <div className="buttonGroup" id="group5">
+      <Button name="0" wide color="ash" />
+      <Button name="." color="ash" />
+      <Button name="=" />
     </div>
   </div>
 );

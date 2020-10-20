@@ -5,8 +5,8 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-      <Display result="Result goes here" />
+    <div className="containerDiv">
+      <Display />
       <ButtonPanel />
     </div>
   );
