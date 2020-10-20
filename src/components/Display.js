@@ -7,7 +7,7 @@ export class Display extends React.Component {
   }
 
   render(){
-    return <div></div>
+    return <div>"Result goes here"</div>
   }
 }
 
