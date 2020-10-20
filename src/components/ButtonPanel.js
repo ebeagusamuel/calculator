@@ -1,15 +1,15 @@
-import React from "react";
-import Button from "./Button";
+import React from 'react';
+import Button from './Button';
 
-const renderButton = (name) => <Button name={name} />;
+const renderButton = name => <Button name={name} />;
 
 const ButtonPanel = () => {
   const buttonNames = {
-    group1: ["AC", "+/-", "%", "÷"],
-    group2: ["7", "8", "9", "X"],
-    group3: ["4", "5", "6", "-"],
-    group4: ["1", "2", "3", "+"],
-    group5: ["0", ".", "="],
+    group1: ['AC', '+/-', '%', '÷'],
+    group2: ['7', '8', '9', 'X'],
+    group3: ['4', '5', '6', '-'],
+    group4: ['1', '2', '3', '+'],
+    group5: ['0', '.', '='],
   };
 
   return (
