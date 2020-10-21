@@ -1,18 +1,18 @@
-import operate from "./operate";
+import operate from './operate';
 
 const calculate = (calObj, btnName) => {
   const data = calObj;
   const { total, next, operation } = data;
-  const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-  const mathSymbols = ["+", "-", "x", "÷"];
+  const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+  const mathSymbols = ['+', '-', 'x', '÷'];
 
-  if (btnName === "AC") {
-    data.total = "";
-    data.next = "";
-    data.operation = "";
+  if (btnName === 'AC') {
+    data.total = '';
+    data.next = '';
+    data.operation = '';
   }
 
-  if (btnName === "+/-") {
+  if (btnName === '+/-') {
     if (total && !next) {
       data.total = total * -1;
     }
@@ -21,15 +21,15 @@ const calculate = (calObj, btnName) => {
     }
   }
 
-  if(btnName === '%'){
-    if(total && !next){
-      data.operation = btnName
+  if (btnName === '%') {
+    if (total && !next) {
+      data.operation = btnName;
     }
     const numberOne = data.total;
     const numberTwo = data.next;
     const mathSymbol = data.operation;
 
-    let ans = operate(numberOne, numberTwo, mathSymbol);
+    const ans = operate(numberOne, numberTwo, mathSymbol);
     data.total = ans;
     data.next = '';
     data.operation = '';
@@ -37,20 +37,19 @@ const calculate = (calObj, btnName) => {
     return data;
   }
 
-  if (btnName === ".") {
+  if (btnName === '.') {
     if (!total && !next) {
       data.total += `0${btnName}`;
     }
-    if(total && !next && operation){
-      data.next = `0${btnName}`
+    if (total && !next && operation) {
+      data.next = `0${btnName}`;
     }
-    if(total && next && operation){
-      data.next += btnName 
+    if (total && next && operation) {
+      data.next += btnName;
     }
     if (total && !next && !operation) {
       data.total += btnName;
     }
-    
   }
 
   if (numbers.includes(btnName)) {
@@ -63,30 +62,30 @@ const calculate = (calObj, btnName) => {
   }
 
   if (mathSymbols.includes(btnName)) {
-    if(total && !next){
+    if (total && !next) {
       data.operation = btnName;
     }
 
-    if(total && next && operation){
+    if (total && next && operation) {
       const numberOne = data.total;
       const numberTwo = data.next;
       const mathSymbol = data.operation;
-  
-      let ans = operate(numberOne, numberTwo, mathSymbol);
+
+      const ans = operate(numberOne, numberTwo, mathSymbol);
       data.total = ans;
       data.next = '';
       data.operation = btnName;
-  
-      return data; 
+
+      return data;
     }
   }
 
-  if (btnName === "=" && total && next && operation) {
+  if (btnName === '=' && total && next && operation) {
     const numberOne = data.total;
     const numberTwo = data.next;
     const mathSymbol = data.operation;
 
-    let ans = operate(numberOne, numberTwo, mathSymbol);
+    const ans = operate(numberOne, numberTwo, mathSymbol);
     data.total = ans;
     data.next = '';
     data.operation = '';

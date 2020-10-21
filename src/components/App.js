@@ -6,26 +6,29 @@ import calculate from '../logic/calculate';
 import './App.css';
 
 class App extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      total: '',
-      next: '',
-      operation: ''
-    }
-    this.handleClick = this.handleClick.bind(this)
+      displayObj: {
+        total: '',
+        next: '',
+        operation: '',
+      },
+    };
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(buttonName){
-    let calObj = this.state
-    let result = calculate(calObj, buttonName)
-    this.setState(result) 
+  handleClick(buttonName) {
+    const { displayObj } = this.state;
+    const result = calculate(displayObj, buttonName);
+    this.setState({ displayObj: result });
   }
 
-  render(){
+  render() {
+    const { displayObj } = this.state;
     return (
       <div className="containerDiv">
-        <Display result={this.state} />
+        <Display result={displayObj} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );

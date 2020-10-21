@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { name, wide, color, onClick } = props;
+  const {
+    name, wide, color, onClick,
+  } = props;
   const buttonStyle = {
     width: `${wide === true ? 50 : 25}%`,
     height: '100%',
