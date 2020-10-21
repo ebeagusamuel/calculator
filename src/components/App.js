@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      total: '0',
+      total: '',
       next: '',
       operation: ''
     }
@@ -19,7 +19,7 @@ class App extends React.Component {
   handleClick(buttonName){
     let calObj = this.state
     let result = calculate(calObj, buttonName)
-    this.setState(result)
+    this.setState(result) 
   }
 
   render(){

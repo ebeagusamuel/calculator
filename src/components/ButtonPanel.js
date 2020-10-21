@@ -31,7 +31,7 @@ const ButtonPanel = (props) => {
         <Button name="1" color="ash" onClick={clickHandler}/>
         <Button name="2" color="ash" onClick={clickHandler}/>
         <Button name="3" color="ash" onClick={clickHandler}/>
-        <Button name="+" />
+        <Button name="+" onClick={clickHandler}/>
       </div>
       <div className="buttonGroup" id="group5">
         <Button name="0" wide color="ash" onClick={clickHandler}/>
