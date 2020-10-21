@@ -13,7 +13,7 @@ const ButtonPanel = () => (
       <Button name="7" color="ash" />
       <Button name="8" color="ash" />
       <Button name="9" color="ash" />
-      <Button name="X" />
+      <Button name="x" />
     </div>
     <div className="buttonGroup" id="group3">
       <Button name="4" color="ash" />

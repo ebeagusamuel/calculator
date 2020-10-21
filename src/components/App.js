@@ -5,13 +5,31 @@ import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 import './App.css';
 
-function App() {
-  return (
-    <div className="containerDiv">
-      <Display />
-      <ButtonPanel />
-    </div>
-  );
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      total: '0',
+      next: '',
+      operation: ''
+    }
+    this.handleCLick = this.handleCLick.bind(this)
+  }
+
+  handleCLick(buttonName){
+    let calObj = this.state
+    let result = calculate(calObj, buttonName)
+    this.setState(result)
+  }
+
+  render(){
+    return (
+      <div className="containerDiv">
+        <Display result={this.state} />
+        <ButtonPanel />
+      </div>
+    );
+  }
 }
 
 export default App;

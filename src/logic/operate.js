@@ -11,7 +11,7 @@ const operate = (numberOne, numberTwo, operation) => {
     two = Big(numberTwo);
   }
 
-  if (operation === 'X') {
+  if (operation === 'x') {
     ans = one * two;
   }
   if (operation === '+') {
