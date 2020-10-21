@@ -1,17 +1,10 @@
 import operate from './operate';
 
-const calculate = (
-  calObj = {
-    total: '',
-    next: '',
-    operation: '',
-  },
-  btnName,
-) => {
+const calculate = (calObj, btnName) => {
   const data = calObj;
   const { total, next, operation } = data;
   const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-  const mathSymbols = ['+', '-', 'X', '÷', '%'];
+  const mathSymbols = ['+', '-', 'x', '÷'];
 
   if (btnName === 'AC') {
     data.total = '';
@@ -28,12 +21,34 @@ const calculate = (
     }
   }
 
+  if (btnName === '%') {
+    if (total && !next) {
+      data.operation = btnName;
+    }
+    const numberOne = data.total;
+    const numberTwo = data.next;
+    const mathSymbol = data.operation;
+
+    const ans = operate(numberOne, numberTwo, mathSymbol);
+    data.total = ans;
+    data.next = '';
+    data.operation = '';
+
+    return data;
+  }
+
   if (btnName === '.') {
     if (!total && !next) {
-      data.total += btnName;
+      data.total += `0${btnName}`;
     }
-    if (total && !next) {
+    if (total && !next && operation) {
+      data.next = `0${btnName}`;
+    }
+    if (total && next && operation) {
       data.next += btnName;
+    }
+    if (total && !next && !operation) {
+      data.total += btnName;
     }
   }
 
@@ -46,16 +61,36 @@ const calculate = (
     }
   }
 
-  if (mathSymbols.includes(btnName) && total) {
-    data.operation = btnName;
+  if (mathSymbols.includes(btnName)) {
+    if (total && !next) {
+      data.operation = btnName;
+    }
+
+    if (total && next && operation) {
+      const numberOne = data.total;
+      const numberTwo = data.next;
+      const mathSymbol = data.operation;
+
+      const ans = operate(numberOne, numberTwo, mathSymbol);
+      data.total = ans;
+      data.next = '';
+      data.operation = btnName;
+
+      return data;
+    }
   }
 
-  if (btnName === '=') {
+  if (btnName === '=' && total && next && operation) {
     const numberOne = data.total;
     const numberTwo = data.next;
     const mathSymbol = data.operation;
 
-    return operate(numberOne, numberTwo, mathSymbol);
+    const ans = operate(numberOne, numberTwo, mathSymbol);
+    data.total = ans;
+    data.next = '';
+    data.operation = '';
+
+    return data;
   }
 
   return data;

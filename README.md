@@ -6,16 +6,20 @@
 
 > This is a Microverse React project
 
->  Calculator milestone one!
-
 ## Description
+A calculator built with react that can do basic mathematical computation.
 
-Calculator is a react project. This is the first milestone which involves basic set up and deployment 
+<p align="center">
+  <a href="git@github.com:ebeagusamuel/calculator.git">
+    <p align="center"> <img src="https://user-images.githubusercontent.com/34813339/93921506-eca8a200-fd10-11ea-8c9e-a7d744cb0012.png" alt="calculator" height="200"> </p>
+  </a>
 
-## Features
-
-In this project, the following features were done;
-- Created react app with create-react-app
+  <p align="center">
+    <a href="https://github.com/ebeagusamuel/calculator/issues">Report a Bug or Request a Feature</a>
+    ·
+    <a href="https://my-react-calculator199.herokuapp.com/">Live Demo</a>
+  </p>
+</p>
 
 ## Built with
 
@@ -28,6 +32,19 @@ In this project, the following features were done;
 - React
 - create-react-app-buildpack
 - big.js
+
+### Installation
+
+To run the calculator locally, clone the repository and navigate to it's directory:
+
+```bash
+git@github.com:ebeagusamuel/calculator.git
+cd calculator
+npm install
+npm run start
+```
+
+Now go to [localhost:3000](http://localhost:3000) in your browser.
 
 ## Author
 
