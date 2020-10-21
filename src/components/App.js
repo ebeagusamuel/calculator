@@ -13,10 +13,10 @@ class App extends React.Component {
       next: '',
       operation: ''
     }
-    this.handleCLick = this.handleCLick.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  handleCLick(buttonName){
+  handleClick(buttonName){
     let calObj = this.state
     let result = calculate(calObj, buttonName)
     this.setState(result)
@@ -26,7 +26,7 @@ class App extends React.Component {
     return (
       <div className="containerDiv">
         <Display result={this.state} />
-        <ButtonPanel />
+        <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
   }
